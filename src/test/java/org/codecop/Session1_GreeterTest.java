@@ -13,9 +13,11 @@ class Session1_GreeterTest {
     // TODO We will add the proper assertions together.
     
     @Test
+    @DisplayName("Check that 'Hello Peter', greeter.greet('Peter')")
     void shouldReturnHelloName() {
         Greeter greeter = new Greeter();
         // TODO Check that "Hello Peter", greeter.greet("Peter").
+        assertEquals("Hello Peter",greeter.greet("Peter"));
     }
 
     @Test
@@ -23,11 +25,14 @@ class Session1_GreeterTest {
     void shouldReturnHelloForNull() {
         Greeter greeter = new Greeter();
         // TODO Check that "Hello", greeter.greet(null).
+        assertEquals("Hello",greeter.greet(null));
     }
 
     @Test
+    @DisplayName("Check that 'Hello Peter', greeter.greet(' Peter ')")
     void shouldIgnoreWhitespace() {
         Greeter greeter = new Greeter();
         // TODO Check that "Hello Peter", greeter.greet(" Peter ").
+        assertEquals("Hello Peter",greeter.greet(" Peter "));
     }
 }
